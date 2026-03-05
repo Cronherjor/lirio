@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lirio en la Oscuridad</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="godly-light-ray"></div>
+    <div class="godly-light-spot"></div>
+
+    <div class="verse-container">
+        <h1 class="gold-verse">"Como el lirio entre los espinos,<br>así es mi novia entre las demás"</h1>
+        <p class="cantares-reference">Cantares 2:2</p>
+    </div>
+
+    <div class="lily-drawing">
+        <div class="stem"></div>
+        <div class="petal p4"></div>
+        <div class="petal p5"></div>
+        <div class="petal p2"></div>
+        <div class="petal p3"></div>
+        <div class="petal p1"></div>
+        <div class="pistil"></div>
+    </div>
+
+    <div class="thorns-tangle">
+        <div class="tangle-cluster left">
+            <div class="branch b1"></div>
+            <div class="branch b2"></div>
+            <div class="branch b3"></div>
+            <div class="branch b4"></div>
+        </div>
+        <div class="tangle-cluster right">
+            <div class="branch b1"></div>
+            <div class="branch b2"></div>
+            <div class="branch b3"></div>
+            <div class="branch b4"></div>
+        </div>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('App lista para usar'))
+                    .catch(err => console.log('Error al configurar app', err));
+            });
+        }
+    </script>
+
+</body>
+</html>
