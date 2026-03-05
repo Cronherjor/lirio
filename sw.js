@@ -1,4 +1,7 @@
+self.addEventListener('install', (event) => {
+  self.skipWaiting();
+});
+
 self.addEventListener('fetch', (event) => {
-    // Esto permite que la web sea instalable como App
-    event.respondWith(fetch(event.request));
+  event.respondWith(fetch(event.request));
 });
